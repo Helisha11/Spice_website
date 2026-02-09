@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+  <rect width="300" height="200" rx="12" fill="#f3fff6" />
+  <g transform="translate(30,30)" fill="#1b6b47">
+    <path d="M30 100 C40 50,90 20,130 80 C160 120,200 40,240 80" stroke="#2f8a5a" stroke-width="6" fill="none" stroke-linecap="round" />
+    <circle cx="50" cy="60" r="12" fill="#2f8a5a" />
+  </g>
+  <text x="150" y="180" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" fill="#3b6b55">Sustainable Sourcing • Fair Trade</text>
+</svg>

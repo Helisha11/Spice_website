@@ -1,0 +1,32 @@
+[
+  {
+    "model": "pages.faq",
+    "pk": 1,
+    "fields": {
+      "question": "Do you export internationally?",
+      "answer": "Yes, we export globally with reliable logistics and documentation support.",
+      "is_active": true,
+      "position": 1
+    }
+  },
+  {
+    "model": "pages.faq",
+    "pk": 2,
+    "fields": {
+      "question": "What packaging options are available?",
+      "answer": "We offer 25 kg, 50 kg and jumbo bags with aroma-lock, moisture-proof packaging.",
+      "is_active": true,
+      "position": 2
+    }
+  },
+  {
+    "model": "pages.faq",
+    "pk": 3,
+    "fields": {
+      "question": "Do you accept bulk orders in tons?",
+      "answer": "Yes, we serve B2B bulk orders with MOQs depending on the product.",
+      "is_active": true,
+      "position": 3
+    }
+  }
+]

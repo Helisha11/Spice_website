@@ -1,0 +1,210 @@
+[
+  {
+    "model": "pages.product",
+    "pk": 1,
+    "fields": {
+      "name": "Whole Black Peppercorns",
+      "slug": "whole-black-peppercorns",
+      "category": "Pepper",
+      "description": "Premium whole black peppercorns, freshly ground for maximum flavor and aroma.",
+      "price": null,
+      "image_url": "https://images.unsplash.com/photo-1599599810694-b5ac4dd64b73?q=80&w=1200&auto=format&fit=crop",
+      "is_active": true
+    }
+  },
+  {
+    "model": "pages.product",
+    "pk": 2,
+    "fields": {
+      "name": "Garlic Cloves",
+      "slug": "garlic-cloves",
+      "category": "Other",
+      "description": "Fresh, pungent garlic cloves perfect for cooking and seasoning.",
+      "price": null,
+      "image_url": "https://images.unsplash.com/photo-1555507036-ab1f4038808a?q=80&w=1200&auto=format&fit=crop",
+      "is_active": true
+    }
+  },
+  {
+    "model": "pages.product",
+    "pk": 3,
+    "fields": {
+      "name": "Whole Caraway Seeds",
+      "slug": "whole-caraway-seeds",
+      "category": "Other",
+      "description": "Aromatic caraway seeds with a warm, slightly sweet flavor.",
+      "price": null,
+      "image_url": "https://images.unsplash.com/photo-1596040706957-9e70afeee47e?q=80&w=1200&auto=format&fit=crop",
+      "is_active": true
+    }
+  },
+  {
+    "model": "pages.product",
+    "pk": 4,
+    "fields": {
+      "name": "Whole Bay Leaves",
+      "slug": "whole-bay-leaves",
+      "category": "Other",
+      "description": "Dried bay leaves for soups, stews, and seasoning blends.",
+      "price": null,
+      "image_url": "https://images.unsplash.com/photo-1599599810255-d0e64c6a1a4e?q=80&w=1200&auto=format&fit=crop",
+      "is_active": true
+    }
+  },
+  {
+    "model": "pages.product",
+    "pk": 5,
+    "fields": {
+      "name": "Whole Nutmeg",
+      "slug": "whole-nutmeg",
+      "category": "Other",
+      "description": "Whole nutmeg pods with rich, warm spice character.",
+      "price": null,
+      "image_url": "https://images.unsplash.com/photo-1584608828915-c3400ca199e7?q=80&w=1200&auto=format&fit=crop",
+      "is_active": true
+    }
+  },
+  {
+    "model": "pages.product",
+    "pk": 6,
+    "fields": {
+      "name": "Ground Sweet Paprika",
+      "slug": "ground-sweet-paprika",
+      "category": "Other",
+      "description": "Fine ground sweet paprika powder, vibrant red color and mild flavor.",
+      "price": null,
+      "image_url": "https://images.unsplash.com/photo-1599599810986-9f4d2f5ea9d5?q=80&w=1200&auto=format&fit=crop",
+      "is_active": true
+    }
+  },
+  {
+    "model": "pages.product",
+    "pk": 7,
+    "fields": {
+      "name": "Whole Allspice",
+      "slug": "whole-allspice",
+      "category": "Other",
+      "description": "Whole allspice berries with complex warm spice notes.",
+      "price": null,
+      "image_url": "https://images.unsplash.com/photo-1604015521553-ef6fcda6c72d?q=80&w=1200&auto=format&fit=crop",
+      "is_active": true
+    }
+  },
+  {
+    "model": "pages.product",
+    "pk": 8,
+    "fields": {
+      "name": "Hulled White Sesame Seeds",
+      "slug": "hulled-white-sesame-seeds",
+      "category": "Other",
+      "description": "Premium white sesame seeds, hulled and ready for use in recipes.",
+      "price": null,
+      "image_url": "https://images.unsplash.com/photo-1599599810340-6ba5a1c36e5a?q=80&w=1200&auto=format&fit=crop",
+      "is_active": true
+    }
+  },
+  {
+    "model": "pages.product",
+    "pk": 9,
+    "fields": {
+      "name": "Ground Saffron",
+      "slug": "ground-saffron",
+      "category": "Other",
+      "description": "Precious ground saffron threads with distinctive golden color and aroma.",
+      "price": null,
+      "image_url": "https://images.unsplash.com/photo-1599599810494-ae8e2e5b8f7e?q=80&w=1200&auto=format&fit=crop",
+      "is_active": true
+    }
+  },
+  {
+    "model": "pages.product",
+    "pk": 10,
+    "fields": {
+      "name": "Ground Cardamom",
+      "slug": "ground-cardamom",
+      "category": "Cardamom",
+      "description": "Fine ground cardamom powder, aromatic and warming.",
+      "price": null,
+      "image_url": "https://images.unsplash.com/photo-1599599810552-aa3c0d8f4e2f?q=80&w=1200&auto=format&fit=crop",
+      "is_active": true
+    }
+  },
+  {
+    "model": "pages.product",
+    "pk": 11,
+    "fields": {
+      "name": "Bay Leaf",
+      "slug": "bay-leaf",
+      "category": "Other",
+      "description": "Dried bay leaf for flavoring soups, broths, and stews.",
+      "price": null,
+      "image_url": "https://images.unsplash.com/photo-1599599810255-d0e64c6a1a4e?q=80&w=1200&auto=format&fit=crop",
+      "is_active": true
+    }
+  },
+  {
+    "model": "pages.product",
+    "pk": 12,
+    "fields": {
+      "name": "Cinnamon Sticks",
+      "slug": "cinnamon-sticks",
+      "category": "Cinnamon",
+      "description": "Premium cinnamon sticks with sweet, warm spice character.",
+      "price": null,
+      "image_url": "https://images.unsplash.com/photo-1599599810762-17c7b5b5e3b7?q=80&w=1200&auto=format&fit=crop",
+      "is_active": true
+    }
+  },
+  {
+    "model": "pages.product",
+    "pk": 13,
+    "fields": {
+      "name": "Whole Cloves",
+      "slug": "whole-cloves",
+      "category": "Clove",
+      "description": "Warm, intensely fragrant whole cloves ideal for culinary and brewing.",
+      "price": null,
+      "image_url": "https://images.unsplash.com/photo-1598014130137-513294e94d05?q=80&w=1200&auto=format&fit=crop",
+      "is_active": true
+    }
+  },
+  {
+    "model": "pages.product",
+    "pk": 14,
+    "fields": {
+      "name": "Whole Mace",
+      "slug": "whole-mace",
+      "category": "Other",
+      "description": "Whole mace blades with delicate, sweet nutty flavor.",
+      "price": null,
+      "image_url": "https://images.unsplash.com/photo-1599599810994-a6c1c6d5d5d5?q=80&w=1200&auto=format&fit=crop",
+      "is_active": true
+    }
+  },
+  {
+    "model": "pages.product",
+    "pk": 15,
+    "fields": {
+      "name": "Green Cardamom Seeds",
+      "slug": "green-cardamom-seeds",
+      "category": "Cardamom",
+      "description": "Premium green cardamom pods with aromatic seeds inside.",
+      "price": null,
+      "image_url": "https://images.unsplash.com/photo-1602751584552-c6c2282a6d9e?q=80&w=1200&auto=format&fit=crop",
+      "is_active": true
+    }
+  },
+  {
+    "model": "pages.product",
+    "pk": 16,
+    "fields": {
+      "name": "Black Cardamom (Badi Elaichi)",
+      "slug": "black-cardamom-badi",
+      "category": "Cardamom",
+      "description": "Large, smoky black cardamom pods used in savory dishes.",
+      "price": null,
+      "image_url": "https://images.unsplash.com/photo-1583384571979-9f5d7b6d3c5a?q=80&w=1200&auto=format&fit=crop",
+      "is_active": true
+    }
+  }
+]

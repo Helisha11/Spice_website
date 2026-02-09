@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 140">
+  <rect width="200" height="140" rx="12" fill="#fff6f0" />
+  <g transform="translate(20,18)" fill="#8b4b2e">
+    <rect x="30" y="20" width="20" height="80" rx="6" fill="#b45b2e" />
+    <rect x="60" y="10" width="20" height="100" rx="6" fill="#a05028" />
+    <rect x="90" y="20" width="18" height="80" rx="6" fill="#8b4b2e" />
+  </g>
+  <text x="100" y="125" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" fill="#6b3f18">Cinnamon</text>
+</svg>

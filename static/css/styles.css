@@ -1,0 +1,780 @@
+/* Basic reset and base styles */
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  /* AHAB IMPEX Brand Colors - inspired by logo */
+  --spice-forest: #3a2716;
+  /* deep brown from logo */
+  --spice-green: #4a5d3f;
+  /* olive green from cardamom */
+  --spice-gold: #c8a165;
+  /* warm golden from border */
+  --spice-cream: #faf8f5;
+  /* soft cream background */
+  --spice-clove: #2d1810;
+  /* rich dark brown */
+  --spice-brown: #5d4037;
+  /* medium brown */
+  --spice-cinnamon: #a67c52;
+  /* cinnamon brown */
+  --accent: #d4a574;
+  /* button accent - lighter gold */
+  --muted: #6b7280;
+  /* muted text */
+  --text: #1a1410;
+  /* primary text - darker */
+  --heading-font: 'Merriweather', serif;
+  --body-font: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+  --radius-lg: 16px;
+  --radius-md: 12px;
+}
+
+a {
+  color: var(--spice-green);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+body {
+  margin: 0;
+  font-family: var(--body-font);
+  color: var(--text);
+  background: linear-gradient(180deg, #fffdfb 0%, var(--spice-cream) 100%);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--heading-font);
+  color: var(--spice-clove);
+  margin-top: 0;
+}
+
+/* improve link contrast */
+a {
+  color: var(--spice-green);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Layout */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.site-header,
+.site-footer {
+  /* Shared framing style for top and bottom bars - AHAB IMPEX branding */
+  background: linear-gradient(135deg, rgba(58, 39, 22, 0.97) 0%, rgba(74, 93, 63, 0.95) 50%, rgba(45, 24, 16, 0.97) 100%);
+  color: #fff;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 24px rgba(29, 24, 16, 0.3), 0 2px 8px rgba(0, 0, 0, 0.15);
+  border-bottom: 2px solid rgba(200, 161, 101, 0.2);
+}
+
+.site-header .brand {
+  font-weight: 800;
+  letter-spacing: .3px;
+}
+
+.nav a {
+  color: #fff !important;
+  margin-left: 16px;
+}
+
+.nav a:hover {
+  color: #f0c674 !important;
+}
+
+.site-footer {
+  margin-top: 48px;
+  padding: 24px 0;
+  color: #fff !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+main.container {
+  padding: 32px 0;
+}
+
+/* Page headings */
+h1 {
+  font-size: 34px;
+  margin: 0 0 12px;
+  color: #0b0f19;
+}
+
+p {
+  line-height: 1.7;
+}
+
+/* Cards */
+.card {
+  background: linear-gradient(180deg, #ffffff 0%, #faf8f5 100%);
+  border: 1px solid rgba(200, 161, 101, 0.15);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 8px 24px rgba(58, 39, 22, 0.08), 0 2px 8px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+  transition: all .35s cubic-bezier(.2, .9, .2, 1);
+}
+
+.card .card-img-top {
+  height: 220px;
+  object-fit: cover;
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 48px rgba(58, 39, 22, 0.15), 0 8px 16px rgba(0, 0, 0, 0.08);
+  border-color: rgba(200, 161, 101, 0.3);
+}
+
+/* Buttons */
+.btn-spice {
+  background: linear-gradient(135deg, #c8a165 0%, #a67c52 100%);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-md);
+  padding: 12px 24px;
+  font-weight: 700;
+  box-shadow: 0 8px 20px rgba(166, 124, 82, 0.25), 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all .3s cubic-bezier(.2, .9, .2, 1);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.btn-spice:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(166, 124, 82, 0.35), 0 4px 12px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(135deg, #d4a574 0%, #b88a5e 100%);
+  color: #fff;
+}
+
+.btn-outline-spice {
+  color: var(--spice-forest);
+  border: 2px solid var(--spice-gold);
+  background: transparent;
+  font-weight: 600;
+}
+
+.btn-outline-spice:hover {
+  background: var(--spice-gold);
+  color: #fff;
+  border-color: var(--spice-gold);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(200, 161, 101, 0.3);
+}
+
+/* Badges */
+.badge-spice {
+  background: var(--spice-gold);
+  color: #fff;
+}
+
+/* Hero Enhancement */
+.hero-premium-overlay {
+  background: linear-gradient(135deg, rgba(58, 39, 22, 0.9) 0%, rgba(74, 93, 63, 0.7) 100%);
+}
+
+.hero-text-shadow {
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.trust-badge-custom {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(4px);
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  font-weight: 600;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.trust-badge-custom .dot {
+  width: 8px;
+  height: 8px;
+  background: var(--spice-gold);
+  border-radius: 50%;
+}
+
+/* Remove old jar styles as they are no longer used */
+.hero-art,
+.jar {
+  display: none !important;
+}
+
+/* Trust badges */
+.trust-badges .badge-spice {
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  border-radius: 999px;
+  padding: 8px 12px;
+  font-weight: 600;
+  box-shadow: none;
+}
+
+/* Tweak button sizes in hero */
+.hero .btn-lg {
+  padding: 10px 18px;
+  font-size: 16px;
+}
+
+/* Header polish: translucent with subtle blur */
+.navbar-brand strong {
+  font-size: 18px;
+  letter-spacing: 0.6px;
+}
+
+.navbar-nav .nav-link {
+  position: relative;
+  padding: 8px 12px;
+  transition: color .15s ease;
+}
+
+.navbar-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 2px;
+  height: 2px;
+  background: transparent;
+  transition: background .18s ease;
+  border-radius: 2px;
+}
+
+.navbar-nav .nav-link:hover::after {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+/* Section separators */
+.section {
+  padding: 36px 0;
+}
+
+.section+.section {
+  border-top: 1px solid rgba(15, 23, 42, 0.04);
+}
+
+/* Feature cards grid */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 18px;
+}
+
+.features .feature {
+  background: linear-gradient(180deg, #ffffff, #fbfaf7);
+  padding: 18px;
+  border-radius: 12px;
+  border: 1px solid rgba(10, 10, 10, 0.04);
+}
+
+.features .feature h5 {
+  margin-bottom: 8px;
+}
+
+/* Stats / impact */
+.stats {
+  display: flex;
+  gap: 18px;
+  align-items: stretch;
+}
+
+.stat {
+  background: linear-gradient(180deg, #fff, #fbfaf7);
+  padding: 26px;
+  border-radius: 12px;
+  text-align: center;
+  flex: 1;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.stat .number {
+  font-size: 34px;
+  font-weight: 800;
+  color: var(--spice-green);
+}
+
+.stat .label {
+  color: #6b7280;
+  margin-top: 6px;
+}
+
+/* Premium spices full-screen block */
+.premium-spices {
+  position: relative;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  min-height: 72vh;
+  display: flex;
+  align-items: center;
+  padding: 64px 0;
+  background-attachment: scroll;
+}
+
+.premium-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 250, 0.86) 0%, rgba(255, 249, 242, 0.72) 45%, rgba(10, 40, 32, 0.06) 100%),
+  url('{% static "images/spices-hero.jpg" %}');
+  z-index: 1;
+}
+
+/* Hide the small feature icons (user requested removal of dice-like icons) */
+.feature-icon svg {
+  display: block;
+  width: 48px;
+  height: 48px;
+  color: var(--spice-gold);
+}
+
+.features-section .feature-icon {
+  display: block;
+}
+
+.premium-inner {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 24px;
+  position: relative;
+  z-index: 2;
+}
+
+.premium-spices.full-bleed {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  padding: 64px 0;
+}
+
+.premium-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: center;
+}
+
+.premium-hero {
+  padding: 28px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.8), rgba(251, 247, 239, 0.6));
+  border-radius: 16px;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.premium-hero h2 {
+  font-size: 42px;
+  color: var(--spice-brown);
+  margin-bottom: 12px;
+}
+
+.premium-hero p {
+  color: #475569;
+  font-size: 18px;
+  margin-bottom: 18px;
+}
+
+.premium-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: minmax(140px, 1fr);
+  gap: 16px;
+}
+
+.premium-card {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  padding: 18px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(255, 254, 248, 0.9));
+  border-radius: 14px;
+  box-shadow: 0 18px 40px rgba(11, 20, 18, 0.12);
+  transition: transform .28s cubic-bezier(.2, .9, .2, 1), box-shadow .28s ease, filter .28s ease;
+  overflow: hidden;
+  border: 1px solid rgba(11, 90, 74, 0.06);
+}
+
+.premium-card--large {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  align-items: center;
+  padding: 24px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(251, 247, 239, 0.95));
+}
+
+.premium-card img {
+  width: 100%;
+  max-width: 160px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 12px;
+  flex-shrink: 0;
+  box-shadow: 0 8px 16px rgba(11, 20, 18, 0.15);
+}
+
+.premium-card h5 {
+  margin: 0;
+  font-size: 20px;
+  color: var(--spice-brown);
+  font-weight: 700;
+}
+
+.premium-card p {
+  margin: 6px 0 0;
+  color: #475569;
+  font-size: 14px;
+}
+
+.premium-card:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 30px 60px rgba(11, 20, 18, 0.2);
+  filter: brightness(1.05);
+}
+
+.premium-card--large:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 24px 48px rgba(11, 20, 18, 0.18);
+}
+
+/* Decorative overlay */
+.premium-spices::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(900px 300px at 85% 30%, rgba(11, 90, 74, 0.06), transparent 20%);
+  z-index: 1;
+}
+
+/* Disable overlay only for premium sections marked with .no-overlay */
+.premium-spices.no-overlay::before {
+  display: none !important;
+  background: none !important;
+}
+
+.premium-spices.no-overlay .premium-overlay {
+  display: none !important;
+}
+
+@media (max-width: 991px) {
+  .premium-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .premium-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Testimonials tweak */
+.card.testimonial {
+  background: linear-gradient(180deg, #fff, #fffaf0);
+  border-left: 4px solid var(--spice-gold);
+}
+
+/* Footer subscribe */
+.footer-subscribe input[type="email"] {
+  max-width: 320px;
+  display: inline-block;
+  margin-right: 8px;
+}
+
+/* Responsive small adjustments */
+@media (max-width: 767px) {
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 15px;
+  }
+
+  .stats {
+    flex-direction: column;
+  }
+}
+
+/* Utilities */
+.section {
+  padding: 24px 0;
+}
+
+.muted {
+  color: #64748b;
+}
+
+/* Modal theming */
+.modal-spice .modal-header {
+  background: var(--spice-green);
+  color: #fff;
+}
+
+.modal-spice .btn-close {
+  filter: invert(1);
+}
+
+.modal-spice .modal-footer {
+  background: #f1f5f9;
+}
+
+/* Stronger modal styling for registration */
+.modal-spice .modal-content {
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.modal-spice .modal-body {
+  background: linear-gradient(180deg, #fff, #fffaf3);
+}
+
+.registration-form .form-control {
+  border-radius: 8px;
+  border: 1px solid rgba(11, 20, 18, 0.06);
+}
+
+.registration-form .form-label {
+  font-weight: 600;
+  color: var(--spice-brown);
+}
+
+.modal-spice .btn-spice {
+  /* Strong, high-contrast button specifically for modals */
+  background: linear-gradient(90deg, var(--spice-gold), var(--accent)) !important;
+  color: #111 !important;
+  border: none !important;
+  padding: 10px 18px !important;
+  font-weight: 800 !important;
+  box-shadow: 0 10px 30px rgba(199, 120, 30, 0.12) !important;
+}
+
+/* Ensure the submit button is visible even if other rules accidentally override colors */
+.modal-spice .registration-form .btn-spice,
+.modal-spice form .btn-spice {
+  background: linear-gradient(90deg, var(--spice-gold), var(--accent)) !important;
+  color: #111 !important;
+}
+
+.modal-backdrop.show {
+  opacity: 0.6;
+}
+
+.modal {
+  z-index: 2000;
+}
+
+/* Gallery */
+.gallery-img {
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  width: 100%;
+}
+
+/* ========== WhatsApp Widget ========== */
+.whatsapp-widget {
+  position: fixed !important;
+  bottom: 20px !important;
+  right: 20px !important;
+  width: 60px !important;
+  height: 60px !important;
+  background: #25D366 !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4) !important;
+  transition: transform .2s ease, box-shadow .2s ease !important;
+  z-index: 9999 !important;
+  animation: pulse-whatsapp 2s infinite !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+  text-decoration: none !important;
+  line-height: 60px !important;
+  text-align: center !important;
+  flex-shrink: 0 !important;
+}
+
+.whatsapp-widget svg {
+  width: 32px !important;
+  height: 32px !important;
+  fill: #ffffff !important;
+  stroke: none !important;
+  display: block !important;
+  margin: 0 auto !important;
+}
+
+.whatsapp-widget svg * {
+  fill: #ffffff !important;
+  stroke: none !important;
+}
+
+.whatsapp-widget:hover {
+  transform: scale(1.1) !important;
+  box-shadow: 0 8px 20px rgba(37, 211, 102, 0.6) !important;
+}
+
+.whatsapp-widget:active,
+.whatsapp-widget:focus {
+  outline: none !important;
+  text-decoration: none !important;
+}
+
+@keyframes pulse-whatsapp {
+
+  0%,
+  100% {
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+  }
+
+  50% {
+    box-shadow: 0 4px 24px rgba(37, 211, 102, 0.8);
+  }
+}
+
+@media (max-width: 576px) {
+  .whatsapp-widget {
+    width: 50px !important;
+    height: 50px !important;
+    bottom: 16px !important;
+    right: 16px !important;
+    line-height: 50px !important;
+  }
+
+  .whatsapp-widget svg {
+    width: 26px !important;
+    height: 26px !important;
+  }
+}
+
+/* header/footer consolidation moved earlier in the file */
+
+/* ========== Hero Background Enhancement ========== */
+.hero-bg {
+  position: relative;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  border-bottom: 4px solid var(--spice-gold);
+}
+
+.hero-background {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border-radius: 24px;
+}
+
+.hero-bg .hero-inner {
+  position: relative;
+  z-index: 2;
+  padding: 60px 0;
+  color: #fff;
+
+}
+
+.hero-bg h1 {
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 16px;
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.hero-bg p {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.95);
+  max-width: 680px;
+  margin-bottom: 24px;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.text-white-50 {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+/* ========== Features Section ========== */
+.features-section {
+  background: linear-gradient(180deg, rgba(251, 247, 239, 0.5) 0%, rgba(245, 240, 230, 0.3) 100%);
+  padding: 48px 0;
+  margin: 32px 0;
+}
+
+.feature-card {
+  background: linear-gradient(180deg, #ffffff, #fffef9);
+  padding: 28px 20px;
+  border-radius: 14px;
+  border: 1px solid rgba(11, 90, 74, 0.08);
+  box-shadow: 0 8px 24px rgba(11, 20, 18, 0.06);
+  transition: transform .3s cubic-bezier(.2, .9, .2, 1), box-shadow .3s ease;
+  height: 100%;
+}
+
+.feature-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 12px;
+  border-radius: 50%;
+  background: linear-gradient(180deg, rgba(242, 176, 58, 0.12), rgba(199, 120, 30, 0.06));
+}
+
+.feature-icon svg {
+  width: 28px;
+  height: 28px;
+  color: var(--spice-gold);
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 48px rgba(16, 24, 18, 0.12);
+}
+
+.feature-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 16px 40px rgba(11, 20, 18, 0.12);
+}
+
+.feature-icon {
+  color: var(--spice-gold);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.feature-card h5 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--spice-brown);
+  margin-bottom: 8px;
+}
+
+.feature-card p {
+  font-size: 14px;
+  color: #64748b;
+  margin: 0;
+}

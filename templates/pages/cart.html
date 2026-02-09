@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block title %}Cart - {{ BRANDING_CONFIG.company_name|default:'Spice Site' }}{% endblock %}
+{% block content %}
+<div class="section">
+  <h1>Your Cart</h1>
+  {% if items %}
+    <div class="table-responsive">
+      <table class="table">
+        <thead>
+          <tr><th>Product</th><th>Qty</th><th>Price</th><th>Subtotal</th><th></th></tr>
+        </thead>
+        <tbody>
+          {% for it in items %}
+            <tr>
+              <td><a href="{{ it.product.get_absolute_url }}">{{ it.product.name }}</a></td>
+              <td>{{ it.qty }}</td>
+              <td>{% if it.product.price %}₹ {{ it.product.price }}{% else %}-{% endif %}</td>
+              <td>{% if it.subtotal %}₹ {{ it.subtotal }}{% else %}-{% endif %}</td>
+              <td><a href="{% url 'remove_from_cart' it.product.pk %}" class="btn btn-sm btn-outline-secondary">Remove</a></td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    <div class="d-flex justify-content-end align-items-center gap-3">
+      <div class="fw-bold">Total: ₹ {{ total }}</div>
+      <a href="{% url 'contact' %}" class="btn btn-spice">Checkout</a>
+    </div>
+  {% else %}
+    <div class="alert alert-info">Your cart is empty.</div>
+  {% endif %}
+</div>
+{% endblock %}

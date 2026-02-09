@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+  <rect width="300" height="200" rx="12" fill="#fffaf6" />
+  <g transform="translate(30,30)" fill="#6b3f18">
+    <rect x="20" y="30" width="40" height="80" rx="6" fill="#b86a2b" />
+    <rect x="80" y="10" width="120" height="110" rx="8" fill="#f3e6d8" />
+  </g>
+  <text x="150" y="180" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" fill="#6b3f18">Our Story — From farm to export</text>
+</svg>

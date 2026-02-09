@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 140">
+  <rect width="200" height="140" rx="12" fill="#f8fff7" />
+  <g fill="#145c3e" transform="translate(20,20)">
+    <ellipse cx="60" cy="50" rx="40" ry="20" fill="#7bd389" />
+    <path d="M40 40 C60 10,100 10,120 40" fill="#0f7a52" opacity="0.9" />
+  </g>
+  <text x="100" y="125" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" fill="#2f4b3f">Cardamom</text>
+</svg>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 140">
+  <rect width="200" height="140" rx="12" fill="#fff8f6" />
+  <g transform="translate(30,20)" fill="#6b3f18">
+    <path d="M20 20 C30 10,60 10,70 20 L70 70 C60 80,30 80,20 70 Z" fill="#8b4b2e" />
+    <circle cx="54" cy="28" r="6" fill="#5a2f14" />
+  </g>
+  <text x="100" y="125" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" fill="#6b3f18">Cloves</text>
+</svg>

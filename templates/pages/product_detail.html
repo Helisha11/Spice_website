@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block title %}{{ p.name }} - Spice Site{% endblock %}
+{% block content %}
+  <div class="row g-4">
+    <div class="col-md-6" data-aos="fade-right">
+      <img src="{{ p.get_image_url }}" alt="{{ p.name }}" class="img-fluid rounded shadow-sm">
+    </div>
+    <div class="col-md-6" data-aos="fade-left">
+      <h1 class="mb-2">{{ p.name }}</h1>
+      <div class="mb-2"><span class="badge badge-spice">{{ p.category }}</span></div>
+      <p class="muted">{{ p.description }}</p>
+      {% if p.price %}
+        <div class="fs-5 fw-semibold text-success mb-3">₹ {{ p.price }}</div>
+      {% endif %}
+      <a href="{% url 'contact' %}" class="btn btn-spice">Request a Quote</a>
+    </div>
+  </div>
+
+  {% if related %}
+    <div class="section">
+      <h3 class="mb-3" data-aos="fade-up">Related Spices</h3>
+      <div class="row g-4">
+        {% for r in related %}
+          <div class="col-12 col-sm-6 col-lg-4" data-aos="zoom-in">
+            <div class="card h-100">
+              <img src="{{ r.get_image_url }}" class="card-img-top" alt="{{ r.name }}">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">{{ r.name }}</h5>
+                <a href="{{ r.get_absolute_url }}" class="btn btn-outline-spice btn-sm mt-auto">View</a>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  {% endif %}
+{% endblock %}

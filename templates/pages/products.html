@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% block title %}Products - AHAB IMPEX{% endblock %}
+{% block content %}
+<div class="container">
+  <section>
+    <div class="mb-5" data-aos="fade-up">
+      <h2 class="mb-2">Spice Haven: Explore Exotic Flavors</h2>
+      <p>Discover our premium collection of handpicked, export-grade spices. From green cardamom to black pepper, each
+        spice is carefully curated for maximum aroma and flavor.</p>
+    </div>
+
+    <!-- Category Filter -->
+    {% if categories %}
+    <div class="mb-4 pb-4 border-bottom" data-aos="fade-up">
+      <div class="d-flex flex-wrap gap-2">
+        <a href="?" class="btn btn-spice btn-sm {% if not selected %}active{% endif %}">
+          All Categories
+        </a>
+        {% for cat in categories %}
+        <a href="?category={{ cat }}"
+          class="btn {% if selected == cat %}btn-spice{% else %}btn-outline-light border{% endif %} btn-sm">
+          {{ cat }}
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+
+    <!-- Products Grid -->
+    <div class="products-grid">
+      {% for p in items %}
+      <div data-aos="zoom-in">
+        <div class="product-card">
+          <img src="{{ p.get_image_url }}" alt="{{ p.name }}">
+          <div class="product-info">
+            <span class="product-category">{{ p.category }}</span>
+            <h4 class="product-name">{{ p.name }}</h4>
+            <p class="product-desc">{{ p.description|truncatewords:15 }}</p>
+            {% if p.price %}
+            <div class="product-price">₹{{ p.price }}</div>
+            {% endif %}
+            <div class="d-flex gap-2">
+              <a href="{{ p.get_absolute_url }}" class="btn btn-outline-light flex-grow-1"
+                style="border-color: var(--accent-gold); color: var(--accent-gold);">
+                View Details
+              </a>
+              <a href="{% url 'add_to_cart' p.pk %}" class="btn btn-spice flex-grow-1">
+                Add to Cart
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% empty %}
+      <div style="grid-column: 1 / -1;">
+        <div class="alert alert-info text-center">
+          <p class="mb-0">No products available. Check back soon!</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+</div>
+{% endblock %}
