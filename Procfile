@@ -1,1 +1,1 @@
-web: gunicorn spice_site.wsgi
+web: gunicorn spice_site.wsgi:application
